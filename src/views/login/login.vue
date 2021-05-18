@@ -46,9 +46,11 @@ export default {
           var authorization=res.headers['token'];
           console.log(authorization)
           localStorage.setItem('authorization',authorization);
-          //保存token到sessionStorage中
-          //window.sessionStorage.setItem("token", res.data.token);
-          this.$router.replace('/about')
+          //将token存入vuex中
+          //store.commit('setToken',authorization)
+          this.$router.replace('/admin')
+        }else{
+          console.log("登录失败")
         }
       })
     }

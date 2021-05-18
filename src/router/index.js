@@ -1,27 +1,25 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Home from '../views/Home.vue'
 import login from "@/views/login/login";
-
+import admin_index from '@/views/admin/Index';
+import admin_abode from '@/views/admin/About';
+import admin from '@/views/admin/Home';
+import index from '@/views/admin/sys/index'
 
 const routes = [
+  {path :'/',name:'首页',component: index},
+
   {
-    path:'/login',
-    name:'login',
-    component: login
+    path: '/admin',
+    component: admin,
+    name: '管理员页面',
+    redirect:'/admin/admin_index',
+    children: [
+      /*{ path: '/admin/login', name:'登录页面', redirect: login},*/
+      { path: '/admin/admin_index',name:'后台首页',component: admin_index},
+      { path: '/admin/admin_abode',name:'关于',component: admin_abode},
+    ]
   },
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+  { path: '/login', name:'登录页面', component: login}
 ]
 
 const router = createRouter({

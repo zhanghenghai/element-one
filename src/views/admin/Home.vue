@@ -21,7 +21,7 @@
                 background-color="#ffff"
                 style="text-align: left"
                 text-color="#00000">
-              <el-menu-item index="/">
+              <el-menu-item index="/admin/admin_index">
                 <i class="el-icon-menu"></i>
                 <template #title>系统首页</template>
               </el-menu-item>
@@ -31,7 +31,7 @@
                   <span>一个宝箱</span>
                 </template>
                 <el-menu-item-group>
-                  <el-menu-item index="/admin_images">侧栏应用</el-menu-item>
+                  <el-menu-item index="/admin/admin_abode">系统应用</el-menu-item>
                   <el-menu-item index="1-2">插件大全</el-menu-item>
                   <el-menu-item index="1-1">新闻发布</el-menu-item>
                   <el-menu-item index="1-1">今日热卖</el-menu-item>
