@@ -72,24 +72,24 @@
 
       <el-row :gutter="20" style="margin: auto;width: 80%">
         <el-col :span="6" v-for="ap in app" :key="ap.id">
-          <el-card :body-style="{ padding: '0' }" style="height: 160px;">
-            <div style="width: 100%;height: 100%;line-height: 0px" class="imghvr-fade">
+          <el-card :body-style="{ padding: '20' }" style="height: 160px">
+            <div style="width: 100%;line-height: 0;height: 120px;padding: 10%" class="imghvr-fade;">
               <img :src="ap.img" class="image" style="width: 20%;margin: auto;margin-bottom: 5%">
               <figcaption>
-              下载
+                <h3 style="color: #333333">下载</h3>
               </figcaption>
               <span style="height: 100%">{{ap.name}}</span>
-              <div style="margin-top: 20%">
-                <el-rate
-                    v-model="value"
-                    disabled
-                    show-score
-                    text-color="#ff9900"
-                    score-template="{value}">
-                </el-rate>
-              </div>
             </div>
           </el-card>
+          <div style="background-color: #FFFFFF;height: 33px;">
+            <el-rate
+                v-model="value"
+                disabled
+                show-score
+                text-color="#ff9900"
+                score-template="{value}">
+            </el-rate>
+          </div>
         </el-col>
       </el-row>
 

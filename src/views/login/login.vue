@@ -48,7 +48,7 @@ export default {
           localStorage.setItem('authorization',authorization);
           //将token存入vuex中
           //store.commit('setToken',authorization)
-          this.$router.replace('/admin')
+          //this.$router.replace('/admin')
         }else{
           console.log("登录失败")
         }

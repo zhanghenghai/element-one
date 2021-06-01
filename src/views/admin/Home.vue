@@ -31,7 +31,7 @@
                   <span>一个宝箱</span>
                 </template>
                 <el-menu-item-group>
-                  <el-menu-item index="/admin/admin_abode">系统应用</el-menu-item>
+                  <el-menu-item index="/admin/sys_app">系统应用</el-menu-item>
                   <el-menu-item index="1-2">插件大全</el-menu-item>
                   <el-menu-item index="1-1">新闻发布</el-menu-item>
                   <el-menu-item index="1-1">今日热卖</el-menu-item>

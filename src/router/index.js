@@ -1,9 +1,9 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import login from "@/views/login/login";
 import admin_index from '@/views/admin/Index';
-import admin_abode from '@/views/admin/About';
 import admin from '@/views/admin/Home';
-import index from '@/views/admin/sys/index'
+import index from '@/views/sys/index'
+import sys_app from "@/views/admin/sya/sys_app";
 
 const routes = [
   {path :'/',name:'首页',component: index},
@@ -16,7 +16,7 @@ const routes = [
     children: [
       /*{ path: '/admin/login', name:'登录页面', redirect: login},*/
       { path: '/admin/admin_index',name:'后台首页',component: admin_index},
-      { path: '/admin/admin_abode',name:'关于',component: admin_abode},
+      { path: '/admin/sys_app',name:'应用管理',component: sys_app},
     ]
   },
   { path: '/login', name:'登录页面', component: login}
